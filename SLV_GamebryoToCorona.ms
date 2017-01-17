@@ -666,7 +666,7 @@ rollout rGB_Corona "Export / Import"
 		
 		progressStart "Import Materials"
 		escapeEnable
-				
+			
 		for i in 1 to mtl.count do
 		(								
 			local m
@@ -690,10 +690,10 @@ rollout rGB_Corona "Export / Import"
 					for ii in mtlId[i] do
 					(
 						iniMatHeader = mtl[i] + ":" + ii
-																		
+																
 						id = ii as integer
 						
-						if((hasINISetting f iniMatHeader) != true) then
+						if((hasINISetting f iniMatHeader "id") != true) then
 						(
 							mm = Standardmaterial()
 							mm.name = "NO GB MATERIAL"
